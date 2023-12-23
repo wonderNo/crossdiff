@@ -4,7 +4,7 @@
 
 This is the official PyTorch implementation of the paper "Realistic Human Motion Generation with Cross-Diffusion Models". Our method leverages intricate 2D motion knowledge and builds a cross-diffusion mechanism to enhance 3D motion generation.
 
-![teaser](./assets/teaser.png)
+![teaser](https://github.com/wonderNo/crossdiff/blob/master/assets/teaser.png)
 
 ## 1 Setup 
 
