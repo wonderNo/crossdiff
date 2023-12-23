@@ -1,0 +1,15 @@
+NAME: crossdiff_ufc
+
+batch_size: 8
+num_epochs: 2000
+mode: 'finetune_ucf'
+lr: 1e-5
+save_interval: 300
+
+dataset: 'multi'
+ucf_ratio: 0.5
+
+w_m2j: 0.1
+w_j2m: 0.1
+
+resume_checkpoint: ''

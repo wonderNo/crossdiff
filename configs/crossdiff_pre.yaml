@@ -1,0 +1,5 @@
+NAME: crossdiff_pre
+
+batch_size: 32
+num_epochs: 4000
+lr: 1e-4

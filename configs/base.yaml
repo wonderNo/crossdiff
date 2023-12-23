@@ -1,0 +1,62 @@
+NAME: 'test'
+
+# model
+model_type: 'crossdiff'
+resume_checkpoint: ~
+test_checkpoint: ~
+layers: 4
+layers2: 6
+latent_dim: 512
+cond_mask_prob: 0.1
+w_m2j: 1
+w_j2m: 1
+
+# train
+num_epochs: 2000
+save_interval: 200
+eval_interval: 500
+log_interval: 50
+mode: 'pretrain'
+save_dir: 'save'
+running_mode: 'train'
+seed: 233
+batch_size: 32
+eval_during_train: True
+train_platform_type: 'TensorboardPlatform'
+lr: 1e-4
+weight_decay: 0
+lr_anneal_steps: 0
+eval_batch_size: 32
+unconstrained: False
+
+# data
+cut_2d: False
+motion_ratio: 1
+dataset: 'humanml'
+data_root: '/apdcephfs_cq3/share_1290939/zepingren/humanml3d'
+use_mean_joint: True
+joint_mask_ratio: 0
+ucf_ratio: 0
+ucf_root: '/apdcephfs_cq3/share_1290939/zepingren/ufc101'
+ucf_keys: []
+
+# test
+test_generatefrom2d: False
+change_idx: 300
+classifier_free: False
+eval_part: 'all'
+test_mm: False
+
+# diffusion
+noise_schedule: 'cosine'
+diffusion_steps: 1000
+sigma_small: True
+
+# generate
+generate_3d: 1
+generate_2d: 0
+sample_times: 1
+captions:
+  - 'a person is swimming'
+  - 'person is dancing eloquently'
+  - 'he is punching in a fight.'
