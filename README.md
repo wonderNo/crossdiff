@@ -49,7 +49,7 @@ Additionally, please set the `data_root` in the configuration file `configs/base
 
 **UCF101** - This dataset is used to train the model with real-world 2D motion.
 
-Download the original data from the [UFC101 project page](https://www.crcv.ucf.edu/data/UCF101.php#Results_on_UCF101). Then, estimate the 2D pose using the off-the-shelf model [ViTPose](https://github.com/ViTAE-Transformer/ViTPose) and process the 2D data in the same manner as HumanML3D.
+Download the original data from the [UCF101 project page](https://www.crcv.ucf.edu/data/UCF101.php#Results_on_UCF101). Then, estimate the 2D pose using the off-the-shelf model [ViTPose](https://github.com/ViTAE-Transformer/ViTPose) and process the 2D data in the same manner as HumanML3D.
 
 ### 2.2 Train the model
 
