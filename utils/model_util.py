@@ -70,7 +70,4 @@ def create_gaussian_diffusion(args):
         model_var_type=gd.ModelVarType.FIXED_SMALL,
         loss_type=loss_type,
         rescale_timesteps=rescale_timesteps,
-        lambda_vel=args.lambda_vel,
-        lambda_rcxyz=args.lambda_rcxyz,
-        lambda_fc=args.lambda_fc,
     )

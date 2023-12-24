@@ -354,10 +354,11 @@ class HumanML3D(data.Dataset):
         self.mean_for_eval_t = torch.as_tensor(self.mean_for_eval).to(self.device)
         self.std_for_eval_t = torch.as_tensor(self.std_for_eval).to(self.device)
 
-        assert len(self.t2m_dataset) > 1, 'You loaded an empty dataset, ' \
-                                          'it is probably because your data dir has only texts and no motions.\n' \
-                                          'To train and evaluate MDM you should get the FULL data as described ' \
-                                          'in the README file.'
+        if split != 'generate':
+            assert len(self.t2m_dataset) > 1, 'You loaded an empty dataset, ' \
+                                            'it is probably because your data dir has only texts and no motions.\n' \
+                                            'To train and evaluate MDM you should get the FULL data as described ' \
+                                            'in the README file.'
 
     def inv_transform(self, data):
         return data * self.std_t + self.mean_t

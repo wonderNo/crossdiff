@@ -21,7 +21,7 @@ def main():
 
     device = torch.device('cuda')
 
-    data = get_dataset_loader('humanml', split='generate', args=args)
+    dataset = get_dataset_loader('humanml', split='generate', args=args)
     
     model, diffusion = create_model_and_diffusion(args)
     print('Total params: %.2fM' % (sum(p.numel() for p in model.parameters()) / 1000000.0))
@@ -39,7 +39,7 @@ def main():
     clip_model.cuda()
 
     os.makedirs(args.eval_dir, exist_ok=True)
-    captions = args.captions * args.sample_times
+    captions = list(args.captions) * args.sample_times
 
 
     args.nsamples = len(captions)
@@ -73,7 +73,7 @@ def main():
         )
 
         sample = sample[:,:,0].permute(0,2,1)
-        sample = data.dataset.inv_transform(sample)
+        sample = dataset.inv_transform(sample)
         sample = recover_from_ric(sample, 22).cpu().numpy()
 
     
@@ -107,7 +107,7 @@ def main():
 
         sample = joint_predict['m'].detach()
         sample = sample[:,:,0].permute(0,2,1)
-        sample = data.dataset.inv_transform(sample)
+        sample = dataset.inv_transform(sample)
         sample = recover_from_ric(sample, 22).cpu().numpy()
 
     

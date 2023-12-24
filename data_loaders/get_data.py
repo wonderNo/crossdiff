@@ -38,6 +38,9 @@ def get_dataset_loader(name, batch_size=1, split='train', args=None):
     dataset = get_dataset(name, split, args=args)
     collate = get_collate_fn(split)
 
+    if split == 'generate':
+        return dataset
+
     if args.local_rank != -1:
         sampler = DistributedSampler(dataset)
         loader = DataLoader(
