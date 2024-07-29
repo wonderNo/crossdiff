@@ -1,4 +1,4 @@
-# CrossDiff
+# CrossDiff(ECCV2024)
 
 ### [Project Page](https://wonderno.github.io/CrossDiff-webpage/) | [Arxiv](https://arxiv.org/abs/2312.10993)
 
