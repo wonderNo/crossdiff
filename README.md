@@ -111,10 +111,12 @@ We express our gratitude to [MDM](https://github.com/GuyTevet/motion-diffusion-m
 If you find this code useful in your research, please cite:
 
 ```
-@article{ren2023realistic,
+@inproceedings{ren2025realistic,
   title={Realistic Human Motion Generation with Cross-Diffusion Models},
   author={Ren, Zeping and Huang, Shaoli and Li, Xiu},
-  journal={arXiv preprint arXiv:2312.10993},
-  year={2023}
+  booktitle={European Conference on Computer Vision},
+  pages={345--362},
+  year={2025},
+  organization={Springer}
 }
 ```
